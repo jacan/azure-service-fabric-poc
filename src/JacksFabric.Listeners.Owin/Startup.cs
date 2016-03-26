@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Http;
+﻿using System.Web.Http;
 using Owin;
 
 namespace JacksFabric.WebApi.Stateless
@@ -16,7 +11,7 @@ namespace JacksFabric.WebApi.Stateless
             httpConfig.MapHttpAttributeRoutes();
             
             FormatterConfig.ConfigureFormatters(httpConfig.Formatters);
-
+            
             builder.UseWebApi(httpConfig);
         }
     }

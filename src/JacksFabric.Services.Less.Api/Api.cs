@@ -5,13 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using JacksFabric.WebApi.Stateless;
 
-namespace JacksFabric.WebApi.Stateless
+namespace JacksFabric.Services.Less.Api
 {
     /// <summary>
     /// The FabricRuntime creates an instance of this class for each service type instance. 
     /// </summary>
-    internal sealed class Stateless : StatelessService
+    internal sealed class Api : StatelessService
     {
         /// <summary>
         /// Optional override to create listeners (like tcp, http) for this service instance.
@@ -20,6 +21,8 @@ namespace JacksFabric.WebApi.Stateless
         protected override IEnumerable<ServiceInstanceListener> CreateServiceInstanceListeners()
         {
             // TODO: If your service needs to handle user requests, return a list of ServiceReplicaListeners here.
+            //return new ServiceInstanceListener[0];
+
             return new[]
             {
                 new ServiceInstanceListener(initParams =>

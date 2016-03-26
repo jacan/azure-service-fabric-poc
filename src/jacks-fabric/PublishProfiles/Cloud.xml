@@ -16,7 +16,7 @@
                                     StoreName="My" />
   -->
   <ClusterConnectionParameters ConnectionEndpoint="jacksfabric.westeurope.cloudapp.azure.com:19000" />
-  <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />
+  <ApplicationParameterFile Path="..\ApplicationParameters\Local.xml" />
   <UpgradeDeployment Mode="Monitored" Enabled="false">
     <Parameters FailureAction="Rollback" Force="True" />
   </UpgradeDeployment>

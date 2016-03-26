@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Fabric;
 using System.Threading;
 
-namespace JacksFabric.WebApi.Stateless
+namespace JacksFabric.Api.Stateless
 {
     internal static class Program
     {

@@ -7,30 +7,53 @@ Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "jacks_fabric", "jacks-fabri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JacksFabric.Recorder.Stateful", "JacksFabric.Recorder.Stateful\JacksFabric.Recorder.Stateful.csproj", "{0FB992B0-A903-411A-9695-D995208BB1DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JacksFabric.WebApi.Stateless", "JacksFabric.WebApi.Stateless\JacksFabric.WebApi.Stateless.csproj", "{851DA0AB-6B3A-46C5-88F4-EC190DC7C8B6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apis", "Apis", "{A7D21248-6CBA-404D-BDBE-379EE4B2011A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JacksFabric.Listeners.Owin", "JacksFabric.Listeners.Owin\JacksFabric.Listeners.Owin.csproj", "{8850441D-61E9-48BC-ACAD-027A9733D543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JacksFabric.Services.Less.Api", "JacksFabric.Services.Less.Api\JacksFabric.Services.Less.Api.csproj", "{B5AA7AB4-8952-40F6-88E0-F1123C4E226F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E2B9346-B398-4805-919F-EF8743C59358}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{8E2B9346-B398-4805-919F-EF8743C59358}.Debug|x64.ActiveCfg = Debug|x64
 		{8E2B9346-B398-4805-919F-EF8743C59358}.Debug|x64.Build.0 = Debug|x64
 		{8E2B9346-B398-4805-919F-EF8743C59358}.Debug|x64.Deploy.0 = Debug|x64
+		{8E2B9346-B398-4805-919F-EF8743C59358}.Release|Any CPU.ActiveCfg = Release|x64
 		{8E2B9346-B398-4805-919F-EF8743C59358}.Release|x64.ActiveCfg = Release|x64
 		{8E2B9346-B398-4805-919F-EF8743C59358}.Release|x64.Build.0 = Release|x64
 		{8E2B9346-B398-4805-919F-EF8743C59358}.Release|x64.Deploy.0 = Release|x64
+		{0FB992B0-A903-411A-9695-D995208BB1DC}.Debug|Any CPU.ActiveCfg = Debug|x64
 		{0FB992B0-A903-411A-9695-D995208BB1DC}.Debug|x64.ActiveCfg = Debug|x64
 		{0FB992B0-A903-411A-9695-D995208BB1DC}.Debug|x64.Build.0 = Debug|x64
+		{0FB992B0-A903-411A-9695-D995208BB1DC}.Release|Any CPU.ActiveCfg = Release|x64
 		{0FB992B0-A903-411A-9695-D995208BB1DC}.Release|x64.ActiveCfg = Release|x64
 		{0FB992B0-A903-411A-9695-D995208BB1DC}.Release|x64.Build.0 = Release|x64
-		{851DA0AB-6B3A-46C5-88F4-EC190DC7C8B6}.Debug|x64.ActiveCfg = Debug|x64
-		{851DA0AB-6B3A-46C5-88F4-EC190DC7C8B6}.Debug|x64.Build.0 = Debug|x64
-		{851DA0AB-6B3A-46C5-88F4-EC190DC7C8B6}.Release|x64.ActiveCfg = Release|x64
-		{851DA0AB-6B3A-46C5-88F4-EC190DC7C8B6}.Release|x64.Build.0 = Release|x64
+		{8850441D-61E9-48BC-ACAD-027A9733D543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8850441D-61E9-48BC-ACAD-027A9733D543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8850441D-61E9-48BC-ACAD-027A9733D543}.Debug|x64.ActiveCfg = Debug|x64
+		{8850441D-61E9-48BC-ACAD-027A9733D543}.Debug|x64.Build.0 = Debug|x64
+		{8850441D-61E9-48BC-ACAD-027A9733D543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8850441D-61E9-48BC-ACAD-027A9733D543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8850441D-61E9-48BC-ACAD-027A9733D543}.Release|x64.ActiveCfg = Release|Any CPU
+		{8850441D-61E9-48BC-ACAD-027A9733D543}.Release|x64.Build.0 = Release|Any CPU
+		{B5AA7AB4-8952-40F6-88E0-F1123C4E226F}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{B5AA7AB4-8952-40F6-88E0-F1123C4E226F}.Debug|x64.ActiveCfg = Debug|x64
+		{B5AA7AB4-8952-40F6-88E0-F1123C4E226F}.Debug|x64.Build.0 = Debug|x64
+		{B5AA7AB4-8952-40F6-88E0-F1123C4E226F}.Release|Any CPU.ActiveCfg = Release|x64
+		{B5AA7AB4-8952-40F6-88E0-F1123C4E226F}.Release|x64.ActiveCfg = Release|x64
+		{B5AA7AB4-8952-40F6-88E0-F1123C4E226F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8850441D-61E9-48BC-ACAD-027A9733D543} = {A7D21248-6CBA-404D-BDBE-379EE4B2011A}
 	EndGlobalSection
 EndGlobal

@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
 using System.Fabric;
-using System.Fabric.Description;
-using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Owin.Hosting;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
-using Owin;
-
-using static System.FormattableString;
 
 namespace JacksFabric.WebApi.Stateless
 {
@@ -36,25 +27,17 @@ namespace JacksFabric.WebApi.Stateless
         {
             var endpoint = _serviceInitializationParameters.CodePackageActivationContext.GetEndpoint("ServiceEndPoint");
 
-            var port = endpoint.Port;
             var appRoot = string.IsNullOrWhiteSpace(_appRoot) ? 
                 string.Empty : 
                 _appRoot.TrimEnd('/') + '/';
 
-            _listnerAddress = Invariant($"http://+:{endpoint.Port}/{appRoot}");
-
-            //_listnerAddress = string.Format(
-            //    CultureInfo.InvariantCulture,
-            //    "http://+:{0}/{1}",
-            //    port,
-            //    string.IsNullOrWhiteSpace(_appRoot) ? string.Empty : _appRoot.TrimEnd('/') + '/' 
-            //    );
-
+            _listnerAddress = $"http://+:{endpoint.Port}/{appRoot}";
+            
             _serverHandle = WebApp.Start(_listnerAddress, appBuilder => _owinBuilder.Configuration(appBuilder));
 
             var publishAddress = _listnerAddress.Replace("+", FabricRuntime.GetNodeContext().IPAddressOrFQDN);
             
-            ServiceEventSource.Current.Message($"Listening on {publishAddress}");
+            //ServiceEventSource.Current.Message($"Listening on {publishAddress}");
 
             return Task.FromResult(publishAddress);
         }

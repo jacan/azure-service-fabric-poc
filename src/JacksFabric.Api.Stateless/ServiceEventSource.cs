@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JacksFabric.WebApi.Stateless
+namespace JacksFabric.Api.Stateless
 {
     [EventSource(Name = "MyCompany-jacks_fabric-Stateless")]
     internal sealed class ServiceEventSource : EventSource

@@ -15,6 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JacksFabric.Recorder.Stateful\JacksFabric.Recorder.Stateful.csproj" />
+    <ProjectReference Include="..\JacksFabric.Services.Less.Api\JacksFabric.Services.Less.Api.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Service Fabric Tools\Microsoft.VisualStudio.Azure.Fabric.ApplicationProject.targets" />
 </Project>

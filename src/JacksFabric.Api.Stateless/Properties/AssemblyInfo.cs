@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JacksFabric.WebApi.Stateless")]
+[assembly: AssemblyTitle("JacksFabric.Api.Stateless")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("JacksFabric.WebApi.Stateless")]
+[assembly: AssemblyProduct("JacksFabric.Api.Stateless")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("851da0ab-6b3a-46c5-88f4-ec190dc7c8b6")]
+[assembly: Guid("83a8f4b2-245a-44dc-b8db-8aca86548ba6")]
 
 // Version information for an assembly consists of the following four values:
 //

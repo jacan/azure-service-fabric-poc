@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="jacks_fabricType" ApplicationTypeVersion="1.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="jacks_fabricType" ApplicationTypeVersion="1.1.2" xmlns="http://schemas.microsoft.com/2011/01/fabric">
    <Parameters>
-      <Parameter Name="Stateless_InstanceCount" DefaultValue="-1" />
+      <Parameter Name="Api_InstanceCount" DefaultValue="-1" />
       <Parameter Name="Stateful_MinReplicaSetSize" DefaultValue="2" />
       <Parameter Name="Stateful_PartitionCount" DefaultValue="1" />
       <Parameter Name="Stateful_TargetReplicaSetSize" DefaultValue="3" />
    </Parameters>
    <ServiceManifestImport>
-      <ServiceManifestRef ServiceManifestName="JacksFabric.WebApi.StatelessPkg" ServiceManifestVersion="1.0.0" />
+      <ServiceManifestRef ServiceManifestName="JacksFabric.Services.Less.ApiPkg" ServiceManifestVersion="1.0.5" />
       <ConfigOverrides />
    </ServiceManifestImport>
    <ServiceManifestImport>
-      <ServiceManifestRef ServiceManifestName="JacksFabric.Recorder.StatefulPkg" ServiceManifestVersion="1.0.0" />
+      <ServiceManifestRef ServiceManifestName="JacksFabric.Recorder.StatefulPkg" ServiceManifestVersion="1.0.3" />
       <ConfigOverrides />
    </ServiceManifestImport>
    <DefaultServices>
-      <Service Name="Stateless">
-         <StatelessService ServiceTypeName="StatelessType" InstanceCount="[Stateless_InstanceCount]">
+      <Service Name="Api">
+         <StatelessService ServiceTypeName="ApiType" InstanceCount="[Api_InstanceCount]">
             <SingletonPartition />
          </StatelessService>
       </Service>
